@@ -1,0 +1,3 @@
+/home/mxli/codeSpace/yolocv/CMakeFiles/rebuild_cache.dir
+/home/mxli/codeSpace/yolocv/CMakeFiles/edit_cache.dir
+/home/mxli/codeSpace/yolocv/CMakeFiles/detect.dir

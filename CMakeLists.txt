@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+project( detect )
+find_package( OpenCV REQUIRED )
+add_executable( detect yolov3_detect.cpp )
+target_link_libraries( detect ${OpenCV_LIBS} )
