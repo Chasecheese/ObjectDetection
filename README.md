@@ -30,6 +30,8 @@ $ mkdir model
 # 进入model目录
 $ cd model
 
+
+# 以下三个文件也可以下载后，复制到model文件夹下
 $ wget https://pjreddie.com/media/files/yolov3.weights
 
 $ wget https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg?raw=true -O ./yolov3.cfg
