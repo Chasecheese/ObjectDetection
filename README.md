@@ -11,7 +11,9 @@ $ sudo apt install libopencv-dev python3-opencv
 ```
 
 从源码安装：
+```
 
+```
 **2.克隆代码**
 
 ```bash
