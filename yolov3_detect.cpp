@@ -1,7 +1,5 @@
-// This code is written at BigVision LLC. It is based on the OpenCV project. It is subject to the license terms in the LICENSE file found in this distribution and at http://opencv.org/license.html
-
-// Usage example:  ./object_detection_yolo.out --video=run.mp4
-//                 ./object_detection_yolo.out --image=bird.jpg
+// Usage example:  ./detect --video=run.mp4
+//                 ./detect --image=bird.jpg
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -11,7 +9,7 @@
 #include <opencv2/highgui.hpp>
 
 const char* keys =
-"{help h usage ? | | Usage examples: \n\t\t./object_detection_yolo.out --image=dog.jpg \n\t\t./object_detection_yolo.out --video=run_sm.mp4}"
+"{help h usage ? | | Usage examples: \n\t\t./detect --image=dog.jpg \n\t\t./detect --video=run.mp4}"
 "{image i        |<none>| input image   }"
 "{video v       |<none>| input video   }"
 ;
@@ -58,7 +56,7 @@ int main(int argc, char** argv)
     Net net = readNetFromDarknet(modelConfiguration, modelWeights);
     net.setPreferableBackend(DNN_BACKEND_OPENCV);
     net.setPreferableTarget(DNN_TARGET_CPU);
-    
+
     // Open a video file or an image file or a camera stream.
     string str, outputFile;
     VideoCapture cap;
@@ -97,6 +95,8 @@ int main(int argc, char** argv)
         return 0;
     }
     
+
+
     // Get the video writer initialized to save the output video
     if (!parser.has("image")) {
         video.open(outputFile, VideoWriter::fourcc('M','J','P','G'), 28, Size(cap.get(CAP_PROP_FRAME_WIDTH), cap.get(CAP_PROP_FRAME_HEIGHT)));

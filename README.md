@@ -2,11 +2,16 @@
 需要安装cmake和g++
 
 
-**1.安装OpenCV**  
-Ubuntu安装：
+**1.安装OpenCV 4.2+**  
+Ubuntu 20.04安装：
 ```bash
+# Ubuntu20 默认安装OpenCV 4.2
+$ sudo apt update
 $ sudo apt install libopencv-dev python3-opencv
 ```
+
+从源码安装：
+
 **2.克隆代码**
 
 ```bash
@@ -20,6 +25,8 @@ $ git clone https://gitee.com/chasecheese/ObjectDetection.git
 ```bash
 # 进入目录 /ObjectDetection
 $ cd ObjectDetecton
+# 创建结果存放目录
+$ mkdir result
 ```
 
 **3.下载并导入yolo训练好的数据集和配置文件和数据库**
